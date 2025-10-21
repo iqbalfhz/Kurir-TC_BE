@@ -14,7 +14,8 @@ class DeliveryTest extends TestCase
 
     public function test_can_create_delivery_with_photo()
     {
-        Storage::fake('public');
+    Storage::fake('public');
+    Storage::fake('local');
 
         $user = User::factory()->create();
 
@@ -30,7 +31,7 @@ class DeliveryTest extends TestCase
 
         $response = $this->actingAs($user, 'sanctum')->postJson('/api/deliveries', $payload);
 
-        $response->assertStatus(201);
+    $response->assertStatus(201);
         $this->assertDatabaseHas('deliveries', ['sender_name' => 'Alice', 'receiver_name' => 'Bob']);
 
         $delivery = $response->json();

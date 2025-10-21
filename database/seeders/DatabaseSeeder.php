@@ -15,19 +15,19 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'admin',
+        // ensure admin account exists (avoid duplicate key on repeated seeds)
+        User::firstOrCreate([
             'email' => 'admin@admin.com',
+        ], [
+            'name' => 'admin',
         ]);
 
 
-        //call BookSeeder
-        $this->call(
-            [
-                BookSeeder::class,
-                PostSeeder::class,
-                ContactSeeder::class,
-            ]
-        );
+        // call other seeders and delivery seeder
+        $this->call([
+            PostSeeder::class,
+            ContactSeeder::class,
+            DeliverySeeder::class,
+        ]);
     }
 }

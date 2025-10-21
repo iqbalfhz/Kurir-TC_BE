@@ -33,3 +33,15 @@ Route::get('/test-mail', function () {
     );
     return 'Email sent!';
 });
+
+
+
+Route::get('/tmp-test', function () {
+    return response()->json([
+        'sys_get_temp_dir' => sys_get_temp_dir(),
+        'upload_tmp_dir' => ini_get('upload_tmp_dir'),
+        'is_writable_sys' => is_writable(sys_get_temp_dir()),
+        'php_ini_upload_max_filesize' => ini_get('upload_max_filesize'),
+        'php_ini_post_max_size' => ini_get('post_max_size'),
+    ]);
+});
