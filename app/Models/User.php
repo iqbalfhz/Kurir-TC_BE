@@ -83,4 +83,9 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
     {
         return true;
     }
+
+    public function deliveries()
+    {
+        return $this->hasMany(Delivery::class);
+    }
 }

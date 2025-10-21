@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class StoreDeliveryRequest extends FormRequest
+{
+    public function authorize()
+    {
+        // Route is protected by auth:sanctum. Allow request to pass validation here.
+        return true;
+    }
+
+    public function rules()
+    {
+        return [
+            'sender_name' => 'required|string|max:191',
+            'receiver_name' => 'required|string|max:191',
+            'address' => 'required|string',
+            'notes' => 'nullable|string',
+            'status' => 'nullable|string',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+        ];
+    }
+}

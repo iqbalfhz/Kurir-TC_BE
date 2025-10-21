@@ -17,3 +17,10 @@ Route::prefix('auth')->group(function () {
 
 // contoh protected standar
 Route::middleware('auth:sanctum')->get('/user', fn (Request $r) => $r->user());
+
+// Deliveries CRUD for courier app (protected)
+use App\Http\Controllers\Api\DeliveryController;
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('deliveries', DeliveryController::class);
+});
