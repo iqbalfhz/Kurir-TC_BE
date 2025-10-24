@@ -35,4 +35,12 @@ class Delivery extends Model
     {
         return $this->photo ? Storage::url($this->photo) : null;
     }
+
+    protected static function booted()
+    {
+        // Default ordering: newest first
+        static::addGlobalScope('latest', function ($query) {
+            $query->orderBy('created_at', 'desc');
+        });
+    }
 }

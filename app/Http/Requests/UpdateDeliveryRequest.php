@@ -19,8 +19,10 @@ class UpdateDeliveryRequest extends FormRequest
             'receiver_name' => 'sometimes|required|string|max:191',
             'address' => 'sometimes|required|string',
             'notes' => 'nullable|string',
-            'status' => 'nullable|string',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            // status allowed values: only 'selesai' (Selesai)
+            'status' => "nullable|string|in:selesai",
+            // For updates, photo is optional but when present must be a valid image
+            'photo' => 'sometimes|image|mimes:jpeg,png,jpg,webp|max:5120',
         ];
     }
 }

@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('receiver_name');
             $table->text('address');
             $table->text('notes')->nullable();
-            $table->string('status')->default('pending');
-            $table->string('photo')->nullable();
+            // status values: 'delivered' (berjalan) and 'selesai'
+            $table->string('status')->default('delivered');
+            $table->string('photo');
             $table->timestamps();
         });
     }

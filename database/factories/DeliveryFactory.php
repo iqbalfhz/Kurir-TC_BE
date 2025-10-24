@@ -12,7 +12,8 @@ class DeliveryFactory extends Factory
 
     public function definition()
     {
-        $statuses = ['pending', 'picked_up', 'delivered', 'failed'];
+    // only one status is used now: 'selesai' (Selesai)
+    $statuses = ['selesai'];
 
         return [
             'user_id' => User::inRandomOrder()->value('id') ?? null,
@@ -21,8 +22,8 @@ class DeliveryFactory extends Factory
             'address' => $this->faker->address(),
             'notes' => $this->faker->optional()->sentence(),
             'status' => $this->faker->randomElement($statuses),
-            // simulate stored file path or null
-            'photo' => $this->faker->optional(0.5)->bothify('deliveries/##########.jpg'),
+            // simulate stored file path (must not be null anymore)
+            'photo' => $this->faker->bothify('deliveries/##########.jpg'),
             'created_at' => now(),
             'updated_at' => now(),
         ];

@@ -19,8 +19,10 @@ class StoreDeliveryRequest extends FormRequest
             'receiver_name' => 'required|string|max:191',
             'address' => 'required|string',
             'notes' => 'nullable|string',
-            'status' => 'nullable|string',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            // status allowed values: only 'selesai' (Selesai)
+            'status' => "nullable|string|in:selesai",
+            // Photo is required for new deliveries per updated schema
+            'photo' => 'required|image|mimes:jpeg,png,jpg,webp|max:5120',
         ];
     }
 }

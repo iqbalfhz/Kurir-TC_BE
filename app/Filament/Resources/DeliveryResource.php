@@ -27,10 +27,8 @@ class DeliveryResource extends Resource implements HasShieldPermissions
                 Forms\Components\Textarea::make('notes')->nullable()->columnSpanFull(),
                 Forms\Components\Select::make('status')
                     ->options([
-                        'pending' => 'Pending',
-                        'delivered' => 'Delivered',
-                        'failed' => 'Failed',
-                    ])->default('pending'),
+                        'selesai' => 'Selesai',
+                    ])->default('selesai'),
                 Forms\Components\FileUpload::make('photo')->directory('deliveries')->disk('public')->image()->nullable(),
             ]);
     }

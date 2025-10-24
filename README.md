@@ -9,48 +9,51 @@ A powerful and opinionated FilamentPHP starter kit designed to accelerate your a
 ![PHP Version](https://img.shields.io/badge/PHP-8.2-blue?style=flat-square&logo=php)
 ![Laravel Version](https://img.shields.io/badge/Laravel-11.0-red?style=flat-square&logo=laravel)
 ![Filament Version](https://img.shields.io/badge/Filament-3.2-purple?style=flat-square)
+
 ## Introduction Video
+
 [![Build FilamentPhp Apps 10x Faster | Kaido-Kit Starter Kit (Complete Demo)](https://img.youtube.com/vi/t6q1zBqaBGU/maxresdefault.jpg)](http://www.youtube.com/watch?v=t6q1zBqaBGU "Build FilamentPhp Apps 10x Faster | Kaido-Kit Starter Kit (Complete Demo)")
+
 ## ✨ Features
 
 ### 🛠️ Developer Experience
 
-- ⚡ Quick CRUD generation with customized [FilamentPHP](https://filamentphp.com/) stubs
-    - Optimized UX out of the box
-    - No need to modify generated resources
-- 🔄 Auto reload on save for rapid development
-- 📚 Easy API documentation using [Scramble](https://scramble.dedoc.co/)
-- 📤 Built-in Export and Import examples in Filament resources
+-   ⚡ Quick CRUD generation with customized [FilamentPHP](https://filamentphp.com/) stubs
+    -   Optimized UX out of the box
+    -   No need to modify generated resources
+-   🔄 Auto reload on save for rapid development
+-   📚 Easy API documentation using [Scramble](https://scramble.dedoc.co/)
+-   📤 Built-in Export and Import examples in Filament resources
 
 ### 🔐 Authentication & Authorization
 
-- 🛡️ Role-Based Access Control (RBAC) using [Filament Shield](https://filamentphp.com/plugins/bezhansalleh-shield)
-- 🔑 Enhanced login page with custom design
-- 🌐 Social login with Google via [Filament Socialite](https://filamentphp.com/plugins/dododedodonl-socialite)
-- 👤 User profile management with [Filament Breezy](https://filamentphp.com/plugins/jeffgreco-breezy)
-- 🔒 Instant 2-Factor Authentication capabilities
-- 👥 Simple user-to-role assignment
-- 🎭 User impersonation via [Filament Impersonate](https://filamentphp.com/plugins/joseph-szobody-impersonate)
+-   🛡️ Role-Based Access Control (RBAC) using [Filament Shield](https://filamentphp.com/plugins/bezhansalleh-shield)
+-   🔑 Enhanced login page with custom design
+-   🌐 Social login with Google via [Filament Socialite](https://filamentphp.com/plugins/dododedodonl-socialite)
+-   👤 User profile management with [Filament Breezy](https://filamentphp.com/plugins/jeffgreco-breezy)
+-   🔒 Instant 2-Factor Authentication capabilities
+-   👥 Simple user-to-role assignment
+-   🎭 User impersonation via [Filament Impersonate](https://filamentphp.com/plugins/joseph-szobody-impersonate)
 
 ### 📡 API & Integration
 
-- 🚀 Full API support with [Filament API Service](https://filamentphp.com/plugins/rupadana-api-service)
-    - Seamlessly integrated with Shield
-    - Ready-to-use API endpoints
-- 📨 Email integration using [Resend](https://resend.com/)
-- 📝 Auto-generated API documentation
+-   🚀 Full API support with [Filament API Service](https://filamentphp.com/plugins/rupadana-api-service)
+    -   Seamlessly integrated with Shield
+    -   Ready-to-use API endpoints
+-   📨 Email integration using [Resend](https://resend.com/)
+-   📝 Auto-generated API documentation
 
 ### 📁 Media & Content Management
 
-- 🖼️ Integrated [Filament Media Library](https://filamentphp.com/plugins/filament-spatie-media-library)
-    - Easy media handling process
-    - [Spatie Media Library](https://spatie.be/docs/laravel-medialibrary) support
+-   🖼️ Integrated [Filament Media Library](https://filamentphp.com/plugins/filament-spatie-media-library)
+    -   Easy media handling process
+    -   [Spatie Media Library](https://spatie.be/docs/laravel-medialibrary) support
 
 ### ⚙️ Configuration & Settings
 
-- 🎛️ Dynamic plugin management via [Filament Settings](https://filamentphp.com/plugins/filament-spatie-settings)
-    - Enable/disable features on the fly
-    - [Spatie Laravel Settings](https://github.com/spatie/laravel-settings) integration
+-   🎛️ Dynamic plugin management via [Filament Settings](https://filamentphp.com/plugins/filament-spatie-settings)
+    -   Enable/disable features on the fly
+    -   [Spatie Laravel Settings](https://github.com/spatie/laravel-settings) integration
 
 ## 🚀 Quick Start
 
@@ -222,13 +225,15 @@ php artisan sail:install
 ```
 
 ## Security
+
 Set your app Debug to false in .env file
+
 ```php
 APP_NAME="Kaido-Kit"
 APP_ENV=local
 APP_KEY=base64:gWUd7RPrCZm6iu7qFddY3039BQLroNHJ0nqKcBr8eeA=
 APP_DEBUG=false
-APP_TIMEZONE=UTC
+APP_TIMEZONE=Asia/Jakarta
 APP_URL=https://localhost:8000
 ```
 
@@ -244,23 +249,25 @@ We welcome contributions! Please follow these steps:
 
 ## 🙏 Acknowledgments
 
-- [FilamentPHP](https://filamentphp.com/)
-- [Laravel](https://laravel.com/)
-- All our amazing contributors
+-   [FilamentPHP](https://filamentphp.com/)
+-   [Laravel](https://laravel.com/)
+-   All our amazing contributors
 
 ## 💬 Support
 
-- 🐛 [Report a bug](https://github.com/siubie/kaido-kit/issues)
-- 💡 [Request a feature](https://github.com/siubie/kaido-kit/issues)
-- 📧 [Email support](mailto:putraprima@gmail.com)
-- 💬 [Discord community](https://discord.com/invite/RwqXDUJGPg)
-- 💬 [Whatsapp community](https://chat.whatsapp.com/HJtRp9Eo5wl6NhYIJbkuZL)
+-   🐛 [Report a bug](https://github.com/siubie/kaido-kit/issues)
+-   💡 [Request a feature](https://github.com/siubie/kaido-kit/issues)
+-   📧 [Email support](mailto:putraprima@gmail.com)
+-   💬 [Discord community](https://discord.com/invite/RwqXDUJGPg)
+-   💬 [Whatsapp community](https://chat.whatsapp.com/HJtRp9Eo5wl6NhYIJbkuZL)
 
 ## ⭐ Show your support
+
 For Indonesian community you can get support and the recording course for how to create this kit here :
 https://www.dosenngoding.com/courses/8
 
 Give a ⭐️ if this project helped you!
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=siubie/kaido-kit&type=Date)](https://star-history.com/#siubie/kaido-kit&Date)
