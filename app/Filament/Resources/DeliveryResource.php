@@ -22,6 +22,7 @@ class DeliveryResource extends Resource implements HasShieldPermissions
         return $form
             ->schema([
                 Forms\Components\TextInput::make('sender_name')->required()->maxLength(191),
+                Forms\Components\TextInput::make('delivered_by_name')->label('Delivered By')->nullable()->maxLength(191),
                 Forms\Components\TextInput::make('receiver_name')->required()->maxLength(191),
                 Forms\Components\Textarea::make('address')->required()->columnSpanFull(),
                 Forms\Components\Textarea::make('notes')->nullable()->columnSpanFull(),
@@ -40,6 +41,7 @@ class DeliveryResource extends Resource implements HasShieldPermissions
             ->columns([
                 Tables\Columns\ImageColumn::make('photo')->disk('public')->label('Photo')->square()->toggleable(),
                 Tables\Columns\TextColumn::make('sender_name')->searchable(),
+                Tables\Columns\TextColumn::make('delivered_by_name')->label('Delivered By')->searchable(),
                 Tables\Columns\TextColumn::make('receiver_name')->searchable(),
                 Tables\Columns\TextColumn::make('address')->searchable(),
                 // Tables\Columns\TextColumn::make('notes')->searchable(),

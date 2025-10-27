@@ -16,6 +16,7 @@ class UpdateDeliveryRequest extends FormRequest
     {
         return [
             'sender_name' => 'sometimes|required|string|max:191',
+            'delivered_by_name' => 'sometimes|nullable|string|max:191',
             'receiver_name' => 'sometimes|required|string|max:191',
             'address' => 'sometimes|required|string',
             'notes' => 'nullable|string',

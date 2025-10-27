@@ -21,6 +21,8 @@ class DeliveryFactory extends Factory
             'user_id' => $userId,
             // prefer user's name when we have a linked user, otherwise fake one
             'sender_name' => $sender ?? $this->faker->name(),
+            // name of employee who handed the package to the courier
+            'delivered_by_name' => $this->faker->name(),
             'receiver_name' => $this->faker->name(),
             'address' => $this->faker->address(),
             'notes' => $this->faker->optional()->sentence(),

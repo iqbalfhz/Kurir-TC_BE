@@ -16,6 +16,7 @@ class StoreDeliveryRequest extends FormRequest
     {
         return [
             'sender_name' => 'required|string|max:191',
+            'delivered_by_name' => 'nullable|string|max:191',
             'receiver_name' => 'required|string|max:191',
             'address' => 'required|string',
             'notes' => 'nullable|string',

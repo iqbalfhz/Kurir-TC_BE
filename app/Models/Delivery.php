@@ -13,6 +13,7 @@ class Delivery extends Model
     protected $fillable = [
         'user_id',
         'sender_name',
+        'delivered_by_name',
         'receiver_name',
         'address',
         'notes',
