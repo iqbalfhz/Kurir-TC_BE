@@ -14,10 +14,13 @@ class DeliveryFactory extends Factory
     {
     // only one status is used now: 'selesai' (Selesai)
     $statuses = ['selesai'];
+        $userId = User::inRandomOrder()->value('id') ?? null;
+        $sender = $userId ? optional(User::find($userId))->name : null;
 
         return [
-            'user_id' => User::inRandomOrder()->value('id') ?? null,
-            'sender_name' => $this->faker->name(),
+            'user_id' => $userId,
+            // prefer user's name when we have a linked user, otherwise fake one
+            'sender_name' => $sender ?? $this->faker->name(),
             'receiver_name' => $this->faker->name(),
             'address' => $this->faker->address(),
             'notes' => $this->faker->optional()->sentence(),

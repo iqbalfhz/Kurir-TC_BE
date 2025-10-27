@@ -34,8 +34,13 @@ class DeliveryController extends Controller
 
     public function store(StoreDeliveryRequest $request)
     {
-    $data = $request->validated();
-    $data['user_id'] = $request->user() ? $request->user()->id : null;
+        $data = $request->validated();
+        $data['user_id'] = $request->user() ? $request->user()->id : null;
+
+        // If authenticated user exists, use their name only when sender_name not provided
+        if ($request->user() && empty($data['sender_name'])) {
+            $data['sender_name'] = $request->user()->name;
+        }
 
         // defensive checks for PHP file upload problems (temp dir permission, disk full, etc.)
         if ($request->hasFile('photo')) {
